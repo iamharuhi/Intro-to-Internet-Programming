@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Poem</title>
+		<meta charset="utf-8">
+
+<SCRIPT LANGUAGE="JavaScript">
+function replaceLove(instr)
+{
+    
+    var outstr = "";
+    instr = instr.toString();
+    outstr = instr.replace(/love/g,"hate");
+    
+    document.getElementById('outtext').value = outstr;
+}
+
+
+</SCRIPT>
+</head>
+
+<body>
+
+<textarea name="input" id="intext" ROWS=10 COLS=50 WRAP="virtual">Enter Text Here</textarea>
+<textarea name="output" id="outtext" ROWS=10 COLS=50 WRAP="virtual">Output Text Here</textarea>
+
+<br>
+
+<button onClick="replaceLove(document.getElementById('intext'))">Submit</button>
+
+
+</body>
+</html>
+

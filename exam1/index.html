@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Exam1</title>
+		<meta charset="utf-8">
+<style type="text/css">
+	.formsData
+	{
+		background-color: #ddeeff;
+		border-collapse: collapse;
+
+	}
+
+	.calculatedData
+	{
+		background-color: #cccccc;
+		border-collapse: collapse;
+	}
+
+	th
+	{
+		padding: 3px;
+		text-align: middle;
+		border: solid 1px black;
+	} 
+
+	td
+	{
+		padding: 3px;
+		text-align: right;
+		border: solid 1px black;
+	}
+	
+</style>
+
+<SCRIPT LANGUAGE="JavaScript">
+function calculate(sund, satd, gas1d, gas2d, gas3d, gas4d)
+{
+    sund = parseFloat(sund);
+    satd = parseFloat(satd);
+    gas1d = parseFloat(gas1d);
+    gas2d = parseFloat(gas2d);
+    gas3d = parseFloat(gas3d);
+    gas4d = parseFloat(gas4d);
+    
+    var mileTotal = 0;
+    mileTotal = satd-sund;
+    var avgmile = parseFloat(mileTotal/6);
+    
+    var gas = parseFloat((gas1d + gas2d + gas3d) - gas4d);
+    var mpg = parseFloat(mileTotal/gas);
+    
+
+    
+    document.getElementById("totalM").value = mileTotal;
+    document.getElementById("totalG").value = gas;
+    document.getElementById("avgM").value = avgmile;
+    document.getElementById("mpgL").value = mpg;
+}
+
+
+</SCRIPT>
+</head>
+
+<body>
+
+<!-- <form> -->
+
+<!--input for Sunday through Saturday -->
+<table class="formsData">
+<p><strong>Input The Fuel Gauge On The Dashboard At The End Of The Day</strong></p>
+<tr><th>Sun.</th><th>Mon.</th><th>Tue.</th><th>Wed.</th><th>Thur.</th><th>Fri.</th><th>Sat.</th></tr>
+<tr><td><input type="text" name="value1" id="sund" size="10"></td><td><input type="text" 
+name="value2" id="mond" size="10"></td><td><input type="text" name="value3" id="tued" 
+size="10"></td><td><input type="text" name="value4" id="wedd" size="10"></td><td><input 
+type="text" name="value5" id="thud" size="10"></td><td><input type="text" name="value6" 
+id="frid" size="10"></td><td><input type="text" name="value7" id="satd" size="10"></td></tr>
+</table>
+<p></p>
+
+<!--input for gas -->
+<table class="formsData">
+<tr><td>Gas left in a tank on Sunday(Gallon):</td><td><input type="text" name="gas1" 
+id="gas1d"></td><td></td></tr>
+<tr><td>Gas fill in(Gallon):</td><td><input type="text" name="gas2" id="gas2d"></td><td><input 
+type="text" name="gas3" id="gas3d"></td></tr>
+<tr><td>Gas left in a tank on Saturday(Gallon):</td><td><input type="text" name="gas4" 
+id="gas4d"></td><td></td></tr>
+</table>
+
+<!--implement button.  once it is clicked, pass all input values as arguments to the function 
+-->
+<button onClick="calculate(document.getElementById('sund').value, 
+document.getElementById('satd').value, document.getElementById('gas1d').value, 
+document.getElementById('gas2d').value, document.getElementById('gas3d').value, 
+document.getElementById('gas4d').value)">Calculate Driving Info.</button>
+
+<input type="reset" name="reset" value="Reset">
+<p></p>
+
+<!--Total Miles in a week, Average Miles in a week, Total Gas used in a week, and Miles per 
+Gallon text boxes should be automatically calculated and filled in once “calculate Driving 
+info.” button is clicked.-->
+<table class="calculatedData">
+<tr><td>Total Miles in a week:</td><td><input type="text" name="TotalMiles" id="totalM" 
+readOnly="true"></td><td>Average Miles per day:</td><td><input type="text" name="AvgMiles" 
+id="avgM" readOnly="true"></td></tr>
+<tr><td>Total Gas used in a week:</td><td><input type="text" name="TotalGas" id="totalG" 
+readOnly="true"></td><td>Miles Per Gallon:</td><td><input type="text" name="MPG" id="mpgL" 
+readOnly="true"></td></tr>
+
+
+</table>
+<!-- </form> -->
+</body>
+</html>
+

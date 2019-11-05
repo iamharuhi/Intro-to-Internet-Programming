@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Array</title>
+		<meta charset="utf-8">
+<style type="text/css">
+	.formsData
+	{
+		background-color: #ddeeff;
+		border-collapse: collapse;
+
+	}
+
+	.calculatedData
+	{
+		background-color: #cccccc;
+		border-collapse: collapse;
+	}
+
+	th
+	{
+		padding: 3px;
+		text-align: middle;
+		border: solid 1px black;
+	} 
+
+	td
+	{
+		padding: 3px;
+		text-align: right;
+		border: solid 1px black;
+	}
+	
+</style>
+
+<SCRIPT LANGUAGE="JavaScript">
+function getSports(newForm)
+{
+    var opts = new Array();
+    var elem = newForm.elements;
+    for(i=0;i<7;i++)
+    {
+	if(elem[i].checked = true)
+	{elem[i] = Array[i];}
+    }
+    document.write("<table>");
+    for(i=0;i<7;i++)
+    {
+	document.write("<td> +Array[i]+ </td>");
+    }
+    document.write("</table>");
+}
+
+
+</SCRIPT>
+</head>
+
+<body>
+<h1>Choose all of your favorite sports!</h1>
+<form>
+<input type="checkbox" name="baseball" id="0">Baseball <input type="checkbox" name="volleyball" 
+id="1">Volleyball <input 
+type="checkbox" name="handball" id="2">Handball <input type="checkbox" name="basketball" id="3">Basketball 
+<input 
+type="checkbox"  name="soccer" id="4">Soccer <input type="checkbox" name="bowling" id="5">Bowling <input 
+type="checkbox" 
+name="tennis" id="6">Tennis <input type="checkbox" name="icehocky" id="7">Ice-Hocky
+
+<input type="button" value="Submit" onclick=getSports(this.form)>
+
+
+</form>
+
+</body>
+</html>
+

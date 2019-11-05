@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<Title>JavaScript</Title>
+		<meta charset="utf-8">
+	</head>
+		<SCRIPT LANGUAGE = "JavaScript">
+		/*
+		Naomi Calvi
+		9/25/2019
+		Version 1.0
+		*/
+		function checkS()
+		{
+			document.getElementById("overnight").checked = false;
+			document.getElementById("priority").checked = false;
+		}
+		function checkO()
+		{
+			document.getElementById("standard").checked = false;
+			document.getElementById("priority").checked = false;
+		}
+		function checkP()
+		{
+			document.getElementById("standard").checked = false;
+			document.getElementById("overnight").checked = false;
+		}
+		</SCRIPT>		
+	<body>
+		<input type="checkbox" id="standard" onclick="checkS()"> Standard Shipping <br>
+		<input type="checkbox" id="overnight" onclick="checkO()"> Overnight Shipping <br>
+		<input type="checkbox" id="priority" onclick="checkP()"> Priority Shipping <br>
+	
+
+	</body>
+</html>

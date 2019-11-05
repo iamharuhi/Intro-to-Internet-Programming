@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<Title>JavaScript</Title>
+		<meta charset="utf-8">
+	
+		<style>
+		table, tr, td
+		{
+			border: 1px solid black;
+			padding: 3px;
+			background-color: #ddeeff;
+		}
+		</style>
+
+	</head>
+		<SCRIPT LANGUAGE = "JavaScript">
+		/*
+		Naomi Calvi
+		9/23/2019
+		Version 1.0
+		*/
+		function Domath()
+		{
+			var height = parseInt(document.getElementById("height").value);
+			var weight = parseInt(document.getElementById("weight").value);
+			var sex = document.getElementsByName('sex');
+			var idealweight = 0;
+			if (sex = "male")
+				idealweight = (height-100)-((height-100)*0.10);
+			else
+				idealweight = (height-100)-((height-100)*0.15);
+			var table = document.getElementById("mytable");
+			var row = table.insertRow(5);
+			let cell1 = row.insertCell(0);
+			let cell2 = row.insertCell(1);
+			let newText = document.createTextNode('Ideal Weight: ');
+			let newText1 = document.createTextNode(idealweight);
+			
+			cell1.appendChild(newText);
+			cell2.appendChild(newText1);
+		}
+		</SCRIPT>		
+	<body>
+		<table style="width:40%" id="mytable">
+		 <tr>
+		  <td>Full Name:</td>
+		  <td><input type="text" id="fullname"></td>
+		 </tr>
+		 <tr>
+		  <td>Member ID:</td>
+		  <td><input type="text" id="memberid"></td>
+		 </tr>
+		 <tr>
+		  <td>Sex:</td>
+		  <td><input type="radio" name="sex" value="male"> Male <input type="radio" name="sex" 
+value="female"> Female</td>
+		 </td>
+		 <tr>
+		  <td>Height: </th>
+		  <td><input type="number" id="height" value="150"></td>
+		 </tr>
+		 <tr>
+		  <td>Weight: </th>
+		  <td><input type="number" id="weight" value="60"></td>
+		 </tr>
+		</table>		
+
+		<button onclick="Domath() ">Report It!</button>
+	
+
+	</body>
+</html>

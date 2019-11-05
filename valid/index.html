@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Valid</title>
+		<meta charset="utf-8">
+
+<SCRIPT LANGUAGE="JavaScript">
+function validString()
+{
+    var name = document.getElementById("name").value;
+    var validChar = /^[A-Za-z]+$/;
+    if(name.match(validChar))
+	return true;
+    else
+	alert("Invalid!");
+}
+
+function validInt()
+{
+    var miles = document.getElementById("miles").value;
+    var validNum = /^[0-9]+$/;
+    if(miles.match(validNum))
+	return true;
+    else
+	alert("Invalid!")
+	
+}
+
+</SCRIPT>
+</head>
+
+<body>
+
+<h1>Input your name</h1>
+<br>
+<input type="text" id="name" onblur="validString()">
+<br>
+<h1>Guess the number of miles between Hartford and Boston</h1>
+<br>
+<input type="text" id="miles" onblur="validInt()">
+
+
+
+
+</body>
+</html>
+

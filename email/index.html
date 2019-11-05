@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Email</title>
+		<meta charset="utf-8">
+
+<SCRIPT LANGUAGE="JavaScript">
+function validEmail()
+{
+    var mail = document.getElementById("email").value;
+    var validChar = /[a-zA-Z0-9]+(\.[a-zA-z0-9]+)*@[a-zA-Z0-9]+(\.[a-zA-Z0-9]+)*(\.[a-z]{2,3})$/;
+    if(mail.match(validChar))
+	return true;
+    else
+	alert("Invalid!");
+}
+
+</SCRIPT>
+</head>
+
+<body>
+
+<h1>Input your email</h1>
+<br>
+<input type="text" id="email" onblur="validEmail()">
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Zip Code</title>
+		<meta charset="utf-8">
+
+<SCRIPT LANGUAGE="JavaScript">
+function validZip()
+{
+    var zip = document.getElementById("zip").value;
+    var validZip = /^([0-9]{5})$/;
+    if(zip.match(validZip))
+	alert("Valid Zip");
+    else
+	alert("Invalid!");
+}
+
+</SCRIPT>
+</head>
+
+<body>
+
+<h1>Input US zip code</h1>
+<br>
+<input type="text" id="zip" onblur="validZip()">
+
+</body>
+</html>
